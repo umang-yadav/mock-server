@@ -1,0 +1,25 @@
+name: Commit Message Lint
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+  push:
+    branches:          # Run on all branches
+      - '**'
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get commits
+        id: get_commits
+        uses: tim-actions/get-pr-commits@v3
+
+      - name: Commitlint Check
+        uses: tim-actions/commit-message-checker-with-regex@v0.3.1
+        with:
+          commits: ${{ steps.get_commits.outputs.commits }}
+          pattern: '^(feat|fix|docs|style|test|chore|hotfix): .+ \[I-\d+\]$'
+          error: 'Invalid commit message format. Required format: <action>: <message> [I-<issue number>]'
