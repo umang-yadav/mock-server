@@ -55,8 +55,6 @@ Desktop.ini
 # Spring Boot
 # ========================================
 # Local environment configuration
-application-*.properties
-application-*.yml
 .env
 *.env
 
