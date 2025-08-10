@@ -15,11 +15,11 @@ jobs:
 
       - name: Get commits
         id: get_commits
-        uses: tim-actions/get-pr-commits@v3
+        uses: tim-actions/get-pr-commits@master
 
       - name: Commitlint Check
         uses: tim-actions/commit-message-checker-with-regex@v0.3.1
         with:
           commits: ${{ steps.get_commits.outputs.commits }}
-          pattern: '^(feat|fix|docs|style|test|chore|hotfix): .+ \[I-\d+\]$'
+          pattern: '^(feat|config|fix|docs|style|test|chore|hotfix): .+ \[I-\d+\]$'
           error: 'Invalid commit message format. Required format: <action>: <message> [I-<issue number>]'
