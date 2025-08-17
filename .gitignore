@@ -5,6 +5,8 @@
 *.jar
 *.war
 *.ear
+#rough
+rough/
 # Gradle target directory
 .gradle/
 # Maven target directory
