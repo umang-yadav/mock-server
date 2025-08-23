@@ -1,8 +1,12 @@
 ---
 name: General Issue
 about: This is the default template for all issues.
-title: "[ISSUE] <Describe your issue>"
-labels: ''
+title: "[<ISSUE_TYPE_IN_CAPS>] <Describe your issue>"
+labels:
+  - bug
+  - feat
+  - configure
+  - test
 assignees: ''
 ---
 
@@ -14,7 +18,10 @@ assignees: ''
 
 ## ✅ Acceptance Criteria
 
+### <Sub Heading>
 - [ ] <!-- Add specific, testable completion criteria -->
+- [ ] <!-- Add specific, testable completion criteria -->
+
 ---
 
 ## 🗒️ Note

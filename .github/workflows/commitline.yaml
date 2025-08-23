@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
   push:
-    branches:          # Run on all branches
+    branches:
       - '**'
 
 jobs:
@@ -23,5 +23,5 @@ jobs:
         uses: tim-actions/commit-message-checker-with-regex@v0.3.1
         with:
           commits: ${{ steps.get-pr-commits.outputs.commits }}
-          pattern: '^(feat|fix|docs|style|refactor|perf|test|chore|hotfix): .+ \[I-\d+\]$'
-          error: 'Invalid commit message format. Required format: ACTION: message [I-<issue number>]'
+          pattern: '^(feat|fix|docs|test|chore)#\d+ : .+$'
+          error: 'Invalid commit message format. Required format: <action>#<issue_number> : message'
