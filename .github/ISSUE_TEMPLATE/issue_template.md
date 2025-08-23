@@ -21,7 +21,6 @@ assignees: ''
 ### <Sub Heading>
 - [ ] <!-- Add specific, testable completion criteria -->
 - [ ] <!-- Add specific, testable completion criteria -->
-
 ---
 
 ## 🗒️ Note
