@@ -11,4 +11,3 @@ A simple and configurable mock server for API development and testing.
 - Open-source and community-friendly
 
 ## Installation
-
