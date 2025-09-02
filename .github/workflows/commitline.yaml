@@ -23,5 +23,5 @@ jobs:
         uses: tim-actions/commit-message-checker-with-regex@v0.3.1
         with:
           commits: ${{ steps.get-pr-commits.outputs.commits }}
-          pattern: '^(feat|fix|docs|test|chore)#\d+ : .+$'
+          pattern: ''^(feat|fix|docs|test|chore)#\d+\s*:\s*.+$'
           error: 'Invalid commit message format. Required format: <action>#<issue_number> : message'
