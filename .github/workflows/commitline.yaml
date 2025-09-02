@@ -1,4 +1,4 @@
-name: Commit Message Lint
+name: Commit Message Validation
 
 on:
   pull_request:
@@ -19,9 +19,16 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check Commit Messages
-        uses: tim-actions/commit-message-checker-with-regex@v0.3.1
-        with:
-          commits: ${{ steps.get-pr-commits.outputs.commits }}
-          pattern: ''^(feat|fix|docs|test|chore)#\d+\s*:\s*.+$'
-          error: 'Invalid commit message format. Required format: <action>#<issue_number> : message'
+      - name: Print Invalid Commit Messages
+        run: |
+          echo "Checking for invalid commit messages..."
+          commits='${{ steps.get-pr-commits.outputs.commits }}'
+          pattern='^(feat|fix|docs|test|chore)#\d+\s*:\s*.+$'
+          invalids=$(echo "$commits" | jq -r '.[] | select(.message | test("'"$pattern"'" ; "i") | not) | "\(.sha): \(.message)"')
+          if [[ -n "$invalids" ]]; then
+            echo "Invalid commit messages found:"
+            echo "$invalids"
+            exit 1
+          else
+            echo "All commit messages are valid."
+          fi

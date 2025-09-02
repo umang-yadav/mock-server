@@ -3,9 +3,10 @@ name: General Issue
 about: This is the default template for all issues.
 title: "[<ISSUE_TYPE_IN_CAPS>] <Describe your issue>"
 labels:
-  - bug
-  - feat
   - configure
+  - feat
+  - bug
+  - fix
   - test
 assignees: ''
 ---
