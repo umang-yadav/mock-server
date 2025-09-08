@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "Checking for invalid commit messages..."
           commits='${{ steps.get-pr-commits.outputs.commits }}'
-          pattern='^(feat|fix|docs|test|chore)#\d+\s*:\s*.+$'
+          pattern='^(configure|feat|fix|bug|test)#[0-9]+: *.+$'
           invalids=$(echo "$commits" | jq -r '.[] | select(.message | test("'"$pattern"'" ; "i") | not) | "\(.sha): \(.message)"')
           if [[ -n "$invalids" ]]; then
             echo "Invalid commit messages found:"
