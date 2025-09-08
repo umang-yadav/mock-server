@@ -1,29 +1,21 @@
----
-name: General Issue
-about: This is the default template for all issues.
-title: "[<ISSUE_TYPE_IN_CAPS>] <Describe your issue>"
-labels:
-  - configure
-  - feat
-  - bug
-  - fix
-  - test
-assignees: ''
----
+> [!NOTE]
+> ## 📝 Description
+> Description Details
+> - Description Line 1
+> - Description Line 2
 
-## 📝 Description
+> [!IMPORTANT]
+>## ✅ Acceptance Criteria
+>
+>  #### Acceptance Criteria 1
+>  - [ ] Sub criteria 1
+>  - [ ] Sub Criteria 2
+>
+>  #### Acceptance Criteria 1
+>  - [ ] Sub criteria 1
+>  - [ ] Sub Criteria 2
 
-<!-- What is this issue about? Describe it clearly. -->
-
----
-
-## ✅ Acceptance Criteria
-
-### <Sub Heading>
-- [ ] <!-- Add specific, testable completion criteria -->
-- [ ] <!-- Add specific, testable completion criteria -->
----
-
-## 🗒️ Note
-
-<!-- Additional notes, references, or context -->
+> [!CAUTION]
+> ## 🗒️ Notes
+>  Notes Line 1
+>  Notes Line 2
