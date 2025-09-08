@@ -10,5 +10,9 @@ A simple and configurable mock server for API development and testing.
 - Useful for frontend and backend development workflows
 - Open-source and community-friendly
 
-## Installation
+# Features
+- [Tenants](./site/tenancy/tenants.md)
+-
+# Guidelines
+
 
