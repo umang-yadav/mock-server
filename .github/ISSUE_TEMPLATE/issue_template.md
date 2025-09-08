@@ -1,3 +1,16 @@
+---
+name: General Issue
+about: This is the default template for all issues.
+title: "[<issue_types:configure,feat,bug,fix,test>] <Describe your issue>"
+labels:
+  - configure
+  - feat
+  - bug
+  - fix
+  - test
+assignees: ''
+---
+
 > [!NOTE]
 > ## 📝 Description
 > Description Details
