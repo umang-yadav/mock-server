@@ -11,7 +11,7 @@ A simple and configurable mock server for API development and testing.
 - Open-source and community-friendly
 
 # Features
-- [Tenants](./site/tenancy/tenants.md)
+- [Tenants](site/tenants/tenants.md)
 -
 # Guidelines
 
